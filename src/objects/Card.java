@@ -2,30 +2,33 @@ package objects;
 
 public enum Card
 {
+	// Unknown
+	UNKNOWN( "Uknown", -1 ),
+	
 	// Rooms
-	STUDY( 1 ),
-	HALL( 2 ),
-	LOUNGE( 3 ),
-	LIBRARY( 4 ),
-	BILLIARD( 5 ),
-	DINING( 6 ),
-	CONSERVATORY( 7 ),
-	BALL( 8 ),
-	KITCHEN( 9 ),
+	STUDY( "Study", 1 ),
+	HALL( "Hall", 2 ),
+	LOUNGE( "Lounge", 3 ),
+	LIBRARY( "Library", 4 ),
+	BILLIARD( "Billiard", 5 ),
+	DINING( "Dining", 6 ),
+	CONSERVATORY( "Conservatory", 7 ),
+	BALL( "Ballroom", 8 ),
+	KITCHEN( "Kitchen", 9 ),
 	
 	// Hallways
-	STUDY_HALL( 10 ),
-	HALL_LOUNGE( 11 ),
-	STUDY_LIBRARY( 12 ),
-	HALL_BILLIARD( 13 ),
-	LOUNGE_DINING( 14 ),
-	LIBRARY_BILLIARD( 15 ),
-	BILLIARD_DINING( 16 ),
-	LIBRARY_CONSERVATORY( 17 ),
-	BILLIARD_BALL( 18 ),
-	DINING_KITCHEN( 19 ),
-	CONSERVATORY_BALL( 20 ),
-	BALL_KITCHEN( 21 ),
+	STUDY_HALL( "Study - Hall hallway", 10 ),
+	HALL_LOUNGE( "Hall - Lounge hallway", 11 ),
+	STUDY_LIBRARY( "Study - Library hallway", 12 ),
+	HALL_BILLIARD( "Hall - Billiard hallway", 13 ),
+	LOUNGE_DINING( "Lounge - Dining hallway", 14 ),
+	LIBRARY_BILLIARD( "Library - Billiard hallway", 15 ),
+	BILLIARD_DINING( "Billiard - Dining hallway", 16 ),
+	LIBRARY_CONSERVATORY( "Library - Conservatory hallway", 17 ),
+	BILLIARD_BALL( "Billiard - Ballroom hallway", 18 ),
+	DINING_KITCHEN( "Dining - Kitchen hallway", 19 ),
+	CONSERVATORY_BALL( "Conservatory - Ballroom hallway", 20 ),
+	BALL_KITCHEN( "Ball - Kitchen hallway", 21 ),
 	
 	// Characters
 	MISS_SCARLET( "Miss Scarlet", 22 ),
@@ -36,11 +39,11 @@ public enum Card
 	MRS_PEACOCK( "Mrs. Peacock", 27 ),
 	
 	// Weapons
-	KNIFE( 28 ),
-	CANDLE_STICK( 29 ),
-	ROPE( 30 ),
-	LEAD_PIPE( 31 ),
-	WRENCH( 32 ),
+	KNIFE( "Knife", 28 ),
+	CANDLE_STICK( "Candle Stick", 29 ),
+	ROPE( "Rope", 30 ),
+	LEAD_PIPE( "Lead Pipe", 31 ),
+	WRENCH( "Wrench", 32 ),
 	REVOLVER( "Revolver", 33 );
 	
 	private final int id;
@@ -48,7 +51,6 @@ public enum Card
 	
 	private Card( int id ) { this.id = id; }
 	
-	// Can assign text to the enum if needed to
 	private Card( String name, int id )
 	{
 		this.name = name;
@@ -57,8 +59,29 @@ public enum Card
 	
 	public int value() { return id; }
 	
-	public String getName() { return name; };
+	/**
+	 * Allow lookup for a card using Card ID number
+	 */
+	public static Card getCard( int id )
+	{
+		Card card = Card.UNKNOWN;
+		for( Card c : values() )
+		{
+			if( id == c.value() )
+				card = c;
+		}
+		return card;
+	}
 	
+	/**
+	 * Return the name of the card
+	 */
+	public String getName() { return name; };
+
+	
+	/*
+	 * Test Card
+	 */
 //	public static void main (String a[])
 //	{
 //		Hallway hallway = new Hallway( Card.HALL.value() );
@@ -71,4 +94,5 @@ public enum Card
 //			System.out.println( "card's name " + card.getName() );
 //		}
 //	}
+	
 }

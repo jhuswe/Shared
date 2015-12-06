@@ -2,13 +2,13 @@ package objects;
 
 public enum Action 
 {
-	MOVE( 1 ),
-	SUGGESTION( 2 ),
-	ACCUSATION( 3 ),
-	DISPROVE( 4 ),
-	RECEIVE_DISPROVE_CARD( 5 ),
-	WIN( 6 ),
-	LOSE( 7 );
+	MOVE( "Move", 1 ),
+	SUGGESTION( "Suggestion", 2 ),
+	ACCUSATION( "Accusation", 3 ),
+	DISPROVE( "Disprove", 4 ),
+	RECEIVE_DISPROVE_CARD( "Receive Disprove Card", 5 ),
+	WIN( "Win", 6 ),
+	LOSE( "Lose", 7 );
 	
 	private final int id;
 	private String name;
@@ -25,6 +25,10 @@ public enum Action
 	
 	public String getName() { return name; }
 	
+	
+	/*
+	 * Test Action
+	 */
 //	public static void main (String a[])
 //	{
 //		for( Action act : Action.values() )
