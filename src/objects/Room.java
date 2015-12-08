@@ -71,8 +71,12 @@ public class Room implements Location
 		return this.occupants;
 	}
 	
-	public void setupSecretRoom(Room room) {
+	public void addSecretRoom(Room room) {
 		this.secretConnectedRoom = room;
+	}
+	
+	public Room getSecretRoom() {
+		return this.secretConnectedRoom;
 	}
 	
 	private void initArrays() {
