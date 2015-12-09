@@ -1,19 +1,30 @@
-package objects;
+public class Hallway implements Location 
+{ 
+	int id; 
+	String name;
+	boolean isOccupied;
+	List<Location> connectedRooms;
+	private List<Character> occupant;  
+		
 
-import java.util.*;
+	public Hallway( int id ) 
+	{ 
+		this.id = id; 
+	} 
+	 
+	public List<Character> getOccupants() { 
+		return occupant; 
+	} 
 
-public class Hallway implements Location
-{
-	int id;
-	//should only ever have one occupant but need to make this a list to be able to standardize getOccupants
-	private List<Character> occupant; 
-	
-	public Hallway( int id )
-	{
-		this.id = id;
+	public Character addOccupant(character){
+		occupant.add(character);
 	}
-	
-	public List<Character> getOccupants() {
-		return occupant;
+
+	public Character removeOccupant(character){
+		occupant.remove(character);
 	}
-}
+
+	public List<Location> getConnectedLocations(){
+		return connectedRooms;
+	}
+} 
