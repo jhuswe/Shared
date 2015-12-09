@@ -1,10 +1,11 @@
 package objects;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Hallway implements Location 
 { 
-	int id; 
+	public int id; 
 	String name;
 	boolean isOccupied;
 	List<Location> connectedRooms;
@@ -21,6 +22,8 @@ public class Hallway implements Location
 	} 
 
 	public void addOccupant(Character character){
+		if( occupant == null )
+			occupant = new ArrayList<Character>();
 		occupant.add(character);
 	}
 
