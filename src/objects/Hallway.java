@@ -1,3 +1,7 @@
+package objects;
+
+import java.util.List;
+
 public class Hallway implements Location 
 { 
 	int id; 
@@ -16,11 +20,11 @@ public class Hallway implements Location
 		return occupant; 
 	} 
 
-	public Character addOccupant(character){
+	public void addOccupant(Character character){
 		occupant.add(character);
 	}
 
-	public Character removeOccupant(character){
+	public void removeOccupant(Character character){
 		occupant.remove(character);
 	}
 
