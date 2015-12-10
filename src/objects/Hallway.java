@@ -5,9 +5,9 @@ import java.util.List;
 
 public class Hallway implements Location 
 { 
-	public int id; 
+	int id; 
 	String name;
-	public boolean isOccupied;
+	boolean isOccupied;
 	List<Location> connectedRooms;
 	private List<Character> occupant;  
 		
@@ -42,5 +42,25 @@ public class Hallway implements Location
 	@Override
 	public String getName() {
 		return this.name;
+	}
+	
+	public void setName( String name ) {
+		this.name = name;
+	}
+	
+	public int getId() {
+		return this.id;
+	}
+	
+	public void setId( int id ) {
+		this.id = id;
+	}
+	
+	public void setOccupied( boolean isOccupied ) {
+		this.isOccupied = isOccupied;
+	}
+	
+	public boolean isOccupied() {
+		return this.isOccupied;
 	}
 } 

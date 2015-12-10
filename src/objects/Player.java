@@ -1,9 +1,8 @@
 package objects;
 import java.util.List;
-import java.util.Set;
 
 
-public class Player 
+public class Player extends BaseObject
 {
 	public Character character;
 	public Location location;
