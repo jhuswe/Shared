@@ -2,12 +2,13 @@ package objects;
 
 import java.util.*;
 
-public class Message {
-	int playerId;
-	int actionId;
-	int characterId;
-	List<Integer> guessInfo;
-	List<Location> availableMoves;
-	List<Location> playerLocations;
-	Action action;
+@SuppressWarnings("serial")
+public class Message implements java.io.Serializable {
+	public int playerId;
+	public int actionId;
+	public int characterId;
+	public List<Integer> guessInfo;
+	public List<Location> availableMoves;
+	public List<Location> playerLocations;
+	public Action action;
 }

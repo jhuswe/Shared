@@ -8,14 +8,10 @@ public class MessageBuilder {
 	}
 	
 	public static String SerializeMsg(Message message) {
-		String test = JsonWriter.objectToJson(message);
-		
-		return test;
+		return JsonWriter.objectToJson(message);
 	}
 	
 	public static Message DeserializeMsg(String message) {
-		Message test = (Message) JsonReader.jsonToJava(message);
-		
-		return test;
+		return (Message) JsonReader.jsonToJava(message);
 	}
 }
