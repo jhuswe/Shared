@@ -1,21 +1,24 @@
 package objects;
+import java.util.List;
 import java.util.Set;
 
 
-public class Player extends BaseObject
+public class Player 
 {
-	int id;
-	String name;
-	Set<Card> cards;
+	public Character character;
+	public Location location;
+	public List<Card> cards;
+	public boolean isOutOfGame;
+	
 	
 	public Player()
 	{
 		this( null, null );
 	}
 	
-	public Player( String name, Set<Card> cards )
+	public Player( Character character, List<Card> cards )
 	{
-		this.name = name;
+		this.character = character;
 		this.cards = cards;
 	}
 }
