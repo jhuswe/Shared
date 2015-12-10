@@ -7,14 +7,16 @@ public class Hallway implements Location
 { 
 	public int id; 
 	String name;
-	boolean isOccupied;
+	public boolean isOccupied;
 	List<Location> connectedRooms;
 	private List<Character> occupant;  
 		
 
 	public Hallway( int id ) 
 	{ 
-		this.id = id; 
+		this.id = id;
+		this.name = Card.getCard(id).getName();
+		isOccupied = false;
 	} 
 	 
 	public List<Character> getOccupants() { 
@@ -25,29 +27,20 @@ public class Hallway implements Location
 		if( occupant == null )
 			occupant = new ArrayList<Character>();
 		occupant.add(character);
+		this.isOccupied = true;
 	}
 
 	public void removeOccupant(Character character){
 		occupant.remove(character);
+		isOccupied = false;
 	}
 
 	public List<Location> getConnectedLocations(){
 		return connectedRooms;
 	}
-	
+
+	@Override
 	public String getName() {
 		return this.name;
-	}
-	
-	public void setName(String name) {
-		this.name = name;
-	}
-	
-	public int getId() {
-		return this.id;
-	}
-	
-	public void setId(int id) {
-		this.id = id;
 	}
 } 
