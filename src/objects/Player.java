@@ -2,8 +2,9 @@ package objects;
 import java.util.Set;
 
 
-public class Player 
+public class Player extends BaseObject
 {
+	int id;
 	String name;
 	Set<Card> cards;
 	

@@ -2,40 +2,40 @@ package objects;
 
 import java.util.*;
 
-public class Room implements Location 
+public class Room extends BaseObject implements Location 
 {
-	private String name;
-	private int id;
+//	private String name;
+//	private int id;
 	private Room secretConnectedRoom;
 	private List<Hallway> connectedHallways;
 	private List<Character> occupants;
 	private List<Weapon> weapons;
 			
 	public Room(){
+		super();
 		initArrays();
 	}
 	
 	public Room(int id, String name){
+		super(id, name);
 		initArrays();
-		this.id = id;
-		this.name = name;
 	}
 	
-	public String getName() {
-		return this.name;
-	}
-	
-	public void setName(String name) {
-		this.name = name;
-	}
-	
-	public int getId() {
-		return this.id;
-	}
-	
-	public void setId(int id) {
-		this.id = id;
-	}
+//	public String getName() {
+//		return this.name;
+//	}
+//	
+//	public void setName(String name) {
+//		this.name = name;
+//	}
+//	
+//	public int getId() {
+//		return this.id;
+//	}
+//	
+//	public void setId(int id) {
+//		this.id = id;
+//	}
 	
 	public void addOccupant(Character character) {
 		this.occupants.add(character);
