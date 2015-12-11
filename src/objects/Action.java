@@ -3,13 +3,14 @@ package objects;
 public enum Action 
 {
 	MOVE( "Move", 1 ),
-	SUGGESTION( "Suggestion", 2 ),
+	MAKE_SUGGESTION( "Make Suggestion", 2 ),
 	ACCUSATION( "Accusation", 3 ),
 	DISPROVE( "Disprove", 4 ),
 	RECEIVE_DISPROVE_CARD( "Receive Disprove Card", 5 ),
 	WIN( "Win", 6 ),
 	LOSE( "Lose", 7 ),
-	INITIATE_CHARACTER( "Initiate Character", 8 );
+	INITIATE_CHARACTER( "Initiate Character", 8 ),
+	SHOW_SUGGESTION( "Show Suggestion", 9 );
 	
 	private final int id;
 	private String name;
