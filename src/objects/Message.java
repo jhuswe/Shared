@@ -5,7 +5,7 @@ import java.util.*;
 @SuppressWarnings("serial")
 public class Message implements java.io.Serializable {
 	public int playerId;
-	public List<Integer> guessInfo;
+	public List<Integer> suggestionInfo;
 	public List<Location> availableMoves;
 	public List<Location> playerLocations;
 	public Action action;
