@@ -35,8 +35,8 @@ public enum Card
 	COL_MUSTARD( "Col. Mustard", 23 ),
 	MRS_WHITE( "Mrs. White", 24 ),
 	MR_GREEN( "Mr. Green", 25 ),
-	PROF_PLUM( "Prof. Plum", 26 ),
-	MRS_PEACOCK( "Mrs. Peacock", 27 ),
+	MRS_PEACOCK( "Mrs. Peacock", 26 ),
+	PROF_PLUM( "Prof. Plum", 27 ),
 	
 	// Weapons
 	KNIFE( "Knife", 28 ),
