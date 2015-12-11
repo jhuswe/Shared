@@ -10,9 +10,9 @@ public class Player extends BaseObject
 	public boolean isOutOfGame;
 	
 	
-	public Player()
+	public Player( Character character )
 	{
-		this( null, null );
+		this( character, null );
 	}
 	
 	public Player( Character character, List<Card> cards )
