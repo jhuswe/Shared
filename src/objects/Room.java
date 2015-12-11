@@ -16,26 +16,10 @@ public class Room extends BaseObject implements Location
 		initArrays();
 	}
 	
-	public Room(int id, String name){
-		super(id, name);
+	public Room(int id){
+		super(id, Card.getCard(id).getName());
 		initArrays();
 	}
-	
-//	public String getName() {
-//		return this.name;
-//	}
-//	
-//	public void setName(String name) {
-//		this.name = name;
-//	}
-//	
-//	public int getId() {
-//		return this.id;
-//	}
-//	
-//	public void setId(int id) {
-//		this.id = id;
-//	}
 	
 	public void addOccupant(Character character) {
 		this.occupants.add(character);
