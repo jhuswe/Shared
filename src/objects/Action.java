@@ -9,7 +9,7 @@ public enum Action
 	RECEIVE_DISPROVE_CARD( "Receive Disprove Card", 5 ),
 	WIN( "Win", 6 ),
 	LOSE( "Lose", 7 ),
-	CHARACTER( "Character", 8 );
+	INITIATE_CHARACTER( "Initiate Character", 8 );
 	
 	private final int id;
 	private String name;
