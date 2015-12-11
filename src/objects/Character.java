@@ -2,7 +2,7 @@ package objects;
 
 import java.awt.Color;
 
-public class Character 
+public class Character extends BaseObject
 {
 	public String name;
 	public int id;
@@ -10,7 +10,7 @@ public class Character
 	
 	public Character( int id )
 	{
-		this.name = Card.getCard( id ).getName();
+		super(id, Card.getCard( id ).getName());
 		
 		if( id == Card.COL_MUSTARD.value() )
 			this.color = Color.YELLOW;
