@@ -11,7 +11,8 @@ public enum Action
 	LOSE( "Lose", 7 ),
 	INITIATE_CHARACTER( "Initiate Character", 8 ),
 	SHOW_SUGGESTION( "Show Suggestion", 9 ),
-	NO_DISPROVE_MADE( "No Disprove Made", 10 );
+	NO_DISPROVE_MADE( "No Disprove Made", 10 ),
+	UPDATE_PLAYER_LOCATION( "Update Player Location", 11 );
 	
 	private final int id;
 	private String name;
