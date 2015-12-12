@@ -4,8 +4,6 @@ import java.awt.Color;
 
 public class Character extends BaseObject
 {
-	public String name;
-	public int id;
 	public Color color;
 	
 	public Character( int id )

@@ -9,14 +9,15 @@ public class Player extends BaseObject
 	public List<Card> cards;
 	public boolean isOutOfGame;
 	
-	
 	public Player( Character character )
 	{
-		this( character, null );
+		super();
+		this.character = character;
 	}
 	
 	public Player( Character character, List<Card> cards )
 	{
+		super(character.getId(), character.getName());
 		this.character = character;
 		this.cards = cards;
 	}
