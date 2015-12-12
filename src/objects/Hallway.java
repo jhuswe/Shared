@@ -10,13 +10,14 @@ public class Hallway implements Location
 	boolean isOccupied;
 	List<Location> connectedRooms;
 	private List<Character> occupant;  
-		
 
 	public Hallway( int id ) 
 	{ 
 		this.id = id;
 		this.name = Card.getCard(id).getName();
-		isOccupied = false;
+		this.isOccupied = false;
+		this.connectedRooms = new ArrayList<Location>();
+		this.occupant = new ArrayList<Character>();
 	} 
 	 
 	public List<Character> getOccupants() { 
@@ -62,5 +63,9 @@ public class Hallway implements Location
 	
 	public boolean isOccupied() {
 		return this.isOccupied;
+	}
+	
+	public void addConnectedRoom(Room room) {
+		this.connectedRooms.add(room);
 	}
 } 

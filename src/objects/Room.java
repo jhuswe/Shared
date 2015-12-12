@@ -68,4 +68,8 @@ public class Room extends BaseObject implements Location
 		this.occupants = new ArrayList<Character>();
 		this.weapons = new ArrayList<Weapon>();
 	}
+	
+	public void addHallway(Hallway hallway) {
+		this.connectedHallways.add(hallway);
+	}
 }
