@@ -26,7 +26,12 @@ public class Room extends BaseObject implements Location
 	}
 	
 	public void removeOccupant(Character character) {
-		this.occupants.remove(character);
+		for (int i = 0; i < this.occupants.size(); i++) {
+			if (this.occupants.get(i).getId() == character.getId()) {
+				this.occupants.remove(i);
+				break; //dont keep searching after found
+			}
+		}
 	}
 	
 	public void addWeapon(Weapon weapon) {

@@ -31,9 +31,15 @@ public class Hallway implements Location
 		this.isOccupied = true;
 	}
 
+	//search for occupant and remove it
 	public void removeOccupant(Character character){
-		occupant.remove(character);
-		isOccupied = false;
+		for (int i = 0; i < this.occupant.size(); i++) {
+			if (this.occupant.get(i).getId() == character.getId()) {
+				this.occupant.remove(i);
+				isOccupied = false;
+				break; //dont keep searching after found
+			}
+		}
 	}
 
 	public List<Location> getConnectedLocations(){
