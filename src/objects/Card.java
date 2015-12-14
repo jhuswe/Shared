@@ -11,7 +11,7 @@ public enum Card
 	LOUNGE( "Lounge", 3 ),
 	LIBRARY( "Library", 4 ),
 	BILLIARD( "Billiard", 5 ),
-	DINING( "Dining", 6 ),
+	DINING( "Dining Room", 6 ),
 	CONSERVATORY( "Conservatory", 7 ),
 	BALL( "Ballroom", 8 ),
 	KITCHEN( "Kitchen", 9 ),
